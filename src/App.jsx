@@ -9,6 +9,7 @@ import NoteEntry from './pages/JournalEntry/Journal-Entry'
 import ChangePassword from './pages/ChangePassword/ChangePassword'
 import * as authService from './services/authService'
 
+
 const App = () => {
   const [user, setUser] = useState(authService.getUser())
   const navigate = useNavigate()
@@ -22,6 +23,11 @@ const App = () => {
   const handleSignupOrLogin = () => {
     setUser(authService.getUser())
   }
+
+  // const handleAddNote = async (newNoteData) => {
+  //   const newNote = await noteService.create(newNoteData)
+
+  // }
 
   return (
     <>
