@@ -8,10 +8,11 @@ import Profiles from './pages/Profiles/Profiles'
 import NoteEntry from './pages/JournalEntry/Journal-Entry'
 import ChangePassword from './pages/ChangePassword/ChangePassword'
 import * as authService from './services/authService'
-
+import * as noteService from './services/notesService'
 
 const App = () => {
   const [user, setUser] = useState(authService.getUser())
+  const [notes, setNotes] = useState([])
   const navigate = useNavigate()
 
   const handleLogout = () => {
@@ -24,10 +25,11 @@ const App = () => {
     setUser(authService.getUser())
   }
 
-  // const handleAddNote = async (newNoteData) => {
-  //   const newNote = await noteService.create(newNoteData)
-
-  // }
+  const handleAddNote = async (newNoteData) => {
+    const newNote = await noteService.create(newNoteData)
+    setNotes([...noteService, newNote])
+    navigate('/journal')
+  }
 
   return (
     <>
@@ -49,7 +51,8 @@ const App = () => {
         <Route 
         path='/new-entry'
         element={ <NoteEntry 
-        />}
+          handleAddNote={handleAddNote}
+          />}
         />
 
         <Route
