@@ -27,7 +27,7 @@ const App = () => {
 
   const handleAddNote = async (newNoteData) => {
     const newNote = await noteService.create(newNoteData)
-    setNotes([...noteService, newNote])
+    setNotes([...notes, newNote ])
     navigate('/journal')
   }
 
