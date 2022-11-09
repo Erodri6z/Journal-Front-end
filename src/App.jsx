@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Routes, Route, useNavigate, Navigate } from 'react-router-dom'
 import NavBar from './components/NavBar/NavBar'
 import Signup from './pages/Signup/Signup'
@@ -21,6 +21,14 @@ const App = () => {
     setUser(null)
     navigate('/')
   }
+
+  useEffect(() => {
+    const fetchAllNotes = async () => {
+      const notesData = await noteService.getAll()
+      setNotes(notesData)
+    }
+    fetchAllNotes()
+  }, [])
 
   const handleSignupOrLogin = () => {
     setUser(authService.getUser())
@@ -56,7 +64,7 @@ const App = () => {
           />}
         />
         <Route
-          path='./journal'
+          path='/journal'
           element={ <Journal
             user={user}
             notes={notes}
