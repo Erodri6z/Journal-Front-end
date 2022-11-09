@@ -55,7 +55,13 @@ const App = () => {
           handleAddNote={handleAddNote}
           />}
         />
-
+        <Route
+          path='./journal'
+          element={ <Journal
+            user={user}
+            notes={notes}
+          />}
+        /> 
         <Route
           path="/changePassword"
           element={
