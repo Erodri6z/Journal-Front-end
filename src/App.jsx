@@ -6,6 +6,7 @@ import Login from './pages/Login/Login'
 import Landing from './pages/Landing/Landing'
 import Profiles from './pages/Profiles/Profiles'
 import NoteEntry from './pages/JournalEntry/Journal-Entry'
+import JournalPage from './components/JournalPage/JournalPage'
 import Journal from './components/Journal/Journal'
 import ChangePassword from './pages/ChangePassword/ChangePassword'
 import * as authService from './services/authService'
@@ -70,6 +71,15 @@ const App = () => {
             notes={notes}
           />}
         /> 
+        <Route
+          path="/journal/:id"
+          element={
+            <JournalPage 
+              notes={notes}
+              user={user}
+            />
+          }
+        />
         <Route
           path="/changePassword"
           element={
