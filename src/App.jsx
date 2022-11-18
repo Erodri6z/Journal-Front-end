@@ -41,6 +41,13 @@ const App = () => {
     navigate('/journal')
   }
 
+  const handleDeleteNote = async noteId => {
+    const deletedNote = await noteService.deletedNote(noteId)
+    const newNoteArray = notes.filter(note => note._id !== deletedNote._id)
+    setNotes(newNoteArray)
+    navigate('/journal')
+  }
+
   return (
     <>
       <NavBar user={user} handleLogout={handleLogout} />
@@ -77,6 +84,7 @@ const App = () => {
             <JournalPage 
               notes={notes}
               user={user}
+              handleDeleteNote={handleDeleteNote}
             />
           }
         />
