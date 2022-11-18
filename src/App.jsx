@@ -72,7 +72,7 @@ const App = () => {
           />}
         /> 
         <Route
-          path="/journal/:id"
+          path='/journal-page'
           element={
             <JournalPage 
               notes={notes}

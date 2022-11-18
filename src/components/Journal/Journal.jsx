@@ -5,7 +5,7 @@ const Journal = (props) => {
     <>
     {props.notes.map(note =>
       <div key={note._id}>
-        <Link to='JournalPage' key={note._id} state={( note )}>
+        <Link to='/journal-page' key={note._id} state={{ note }}>
           <h2>{note.title}</h2>
         </Link>
         <p>

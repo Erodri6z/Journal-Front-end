@@ -19,7 +19,15 @@ async function getAll() {
   return await res.json()
 }
 
+async function getNote(noteId) {
+  const res = await fetch(`${BASE_URL}/${noteId}`, {
+    headers: { Authorization: `Bearer ${tokenService.getToken()}` },
+  })
+  return await res.json()
+}
+
 export {
   create,
-  getAll
+  getAll,
+  getNote
 }
