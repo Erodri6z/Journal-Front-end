@@ -26,7 +26,7 @@ const JournalPage = (props) => {
       <h1>Title: {note.title}</h1>
       <h2>Mood: {note.mood}</h2>
       <p>Text: {note.text}</p>
-      <button >Delete (not yet working)</button>
+      <button onClick={() => props.handleDeleteNote(note._id)}>Delete (not yet working)</button>
       <br />
       <button>Edit (comming soon) </button>
     </>

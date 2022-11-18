@@ -42,7 +42,7 @@ const App = () => {
   }
 
   const handleDeleteNote = async noteId => {
-    const deletedNote = await noteService.deletedNote(noteId)
+    const deletedNote = await noteService.deleteNote(noteId)
     const newNoteArray = notes.filter(note => note._id !== deletedNote._id)
     setNotes(newNoteArray)
     navigate('/journal')
