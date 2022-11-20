@@ -17,7 +17,6 @@ const JournalPage = (props) => {
     fetchNoteDetails(notes)
   }, [note._id])
 
-
   
   
   return (
@@ -28,7 +27,9 @@ const JournalPage = (props) => {
       <p>Text: {note.text}</p>
       <button onClick={() => props.handleDeleteNote(note._id)}>Delete</button>
       <br />
-      <button>Edit (coming soon) </button>
+      <a href="/journal">
+        <button>Edit (coming soon)</button>
+      </a>
     </>
   )
 }
