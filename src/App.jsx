@@ -49,7 +49,15 @@ const App = () => {
     navigate('/journal')
   }
 
-  
+  const handleUpdateNote = async (noteData) => {
+    const updatedNote = await noteService.updateNote(noteData)
+    const newNoteArray = notes.map(
+      note => note._id === updatedNote._id ?
+      updatedNote : note
+    )
+    setNotes(newNoteArray)
+    navigate('/journal')
+  }
 
   return (
     <>
@@ -88,6 +96,14 @@ const App = () => {
               notes={notes}
               user={user}
               handleDeleteNote={handleDeleteNote}
+            />
+          }
+        />
+        <Route
+          path='/page-edit'
+          element={
+            <JournalEdit
+            handleUpdateNote={handleUpdateNote}
             />
           }
         />

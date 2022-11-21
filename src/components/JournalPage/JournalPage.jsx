@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { useLocation } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 
 
 import { getNote } from '../../services/notesService'
@@ -27,9 +27,9 @@ const JournalPage = (props) => {
       <p>Text: {note.text}</p>
       <button onClick={() => props.handleDeleteNote(note._id)}>Delete</button>
       <br />
-      <a href="/journal">
+      <Link to="/page-edit" state={{note}}>
         <button>Edit (coming soon)</button>
-      </a>
+      </Link>
     </>
   )
 }
