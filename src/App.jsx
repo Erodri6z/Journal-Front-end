@@ -8,6 +8,7 @@ import Profiles from './pages/Profiles/Profiles'
 import NoteEntry from './pages/JournalEntry/Journal-Entry'
 import JournalPage from './components/JournalPage/JournalPage'
 import Journal from './components/Journal/Journal'
+import JournalEdit from './components/JournalEdit/JournalEdit'
 import ChangePassword from './pages/ChangePassword/ChangePassword'
 import * as authService from './services/authService'
 import * as noteService from './services/notesService'
@@ -47,6 +48,8 @@ const App = () => {
     setNotes(newNoteArray)
     navigate('/journal')
   }
+
+  
 
   return (
     <>
