@@ -1,4 +1,4 @@
-import { useState } from "react"
+import React, { useState } from "react"
 import { useLocation, useNavigate } from "react-router-dom"
 
 const JournalEdit = (props) => {
@@ -20,7 +20,7 @@ const JournalEdit = (props) => {
       console.log(err)
     }
   }
-  
+
   return(
     <>
       <div>

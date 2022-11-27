@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom'
+import React from 'react'
+import './NavBar.module.scss'
 
 const NavBar = ({ user, handleLogout }) => {
   return (
