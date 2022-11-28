@@ -1,0 +1,22 @@
+nav{
+  background-color: rgb(123, 123, 123);
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+ul{
+  margin: 0; 
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+#username{
+  color: white
+}
+
+
+.nav-item{
+  color: white;
+  text-decoration: none;
+}
+

@@ -1,4 +1,4 @@
-import { Navigate, useNavigate } from 'react-router-dom'
+import { Navigate } from 'react-router-dom'
 import React, { useState } from 'react'
 
 
@@ -11,7 +11,7 @@ const NoteEntry = (props) => {
   })
 
   const handleChange = (e) => {
-    setFormData({... formData,
+    setFormData({...formData,
       [e.target.name] : e.target.value})
   }
 
