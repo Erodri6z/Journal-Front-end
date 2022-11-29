@@ -1,0 +1,22 @@
+.title-link{
+  color: black;
+ 
+}
+.page-link{
+  overflow: hidden;
+  max-width:fit fit-content;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.page-preview{
+  padding: 10px 30px;
+}
+
+a{
+  text-decoration: none;
+  
+}
+
+a :hover{
+  color: blueviolet;
+}
