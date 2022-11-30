@@ -1,0 +1,31 @@
+.title{
+  margin-top: 50px;
+  text-align: center;
+}
+
+.mood{
+  text-align: center;
+}
+
+.text{
+  text-align: center;
+}
+
+.delete-btn{
+  margin-left: 47%;
+  color:white;
+  background-color: black;
+  border: 0;
+  padding: 6px;
+  border-radius: 30%;
+}
+
+.edit-btn{
+  color:white;
+  margin-top: 10px;
+  margin-left: 30px;
+  background-color: black;
+  border: 0;
+  padding: 6px;
+  border-radius: 30%;
+}

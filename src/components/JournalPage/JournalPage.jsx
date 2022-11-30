@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { Link, useLocation } from "react-router-dom"
+import './JournalPage.css'
 
 
 import { getNote } from '../../services/notesService'
@@ -21,15 +22,14 @@ const JournalPage = (props) => {
   
   return (
     <>
-
-      <h1>Title: {note.title}</h1>
-      <h2>Mood: {note.mood}</h2>
-      <p>Text: {note.text}</p>
-      <button onClick={() => props.handleDeleteNote(note._id)}>Delete</button>
-      <br />
       <Link to="/page-edit" state={{note}}>
-        <button>Edit (coming soon)</button>
+        <button className="edit-btn">Edit</button>
       </Link>
+      <h1 className="title">Title: {note.title}</h1>
+      <h2 className="mood">Mood: {note.mood}</h2>
+      <p className="text">{note.text}</p>
+      <button className='delete-btn'onClick={() => props.handleDeleteNote(note._id)}>Delete</button>
+      <br />
     </>
   )
 }
