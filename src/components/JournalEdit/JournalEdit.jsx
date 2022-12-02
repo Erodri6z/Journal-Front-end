@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { useLocation, useNavigate } from "react-router-dom"
+import './JournalEdit.css'
 
 const JournalEdit = (props) => {
   const navigate = useNavigate()
@@ -23,14 +24,14 @@ const JournalEdit = (props) => {
 
   return(
     <>
-      <div>
+      <div className="edit-page">
         <form autoComplete='off' onSubmit={handleSubmit}>
           <label>
-            <h3>How was your day</h3>
+            <h3 className='title-label'>How was your day</h3>
           </label>
           <input name="title" id="title-box" value={formData.title} type="text" onChange={handleChange}/>
           <label>
-            <h3>How did you feel</h3>
+            <h3 className='mood-label'>How did you feel</h3>
           </label>
           <select name="mood" id="mood-input" type='text' value={formData.mood} onChange={handleChange}>
             <option value='none'>Select A Mood</option>
@@ -44,10 +45,11 @@ const JournalEdit = (props) => {
             <option value='Depressed'>Depressed</option>
           </select>
           <label>
-            <h3>Tell us more</h3>
+            <h3 className='text-label'>Tell us more</h3>
           </label>
           <textarea name="text" id="textbox" value={formData.text} onChange={handleChange} />
-          <button type='submit'>
+          <br />
+          <button className='publish-btn' type='submit'>
             Publish
           </button>
         </form>
