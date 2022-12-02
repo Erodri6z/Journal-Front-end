@@ -4,7 +4,7 @@ import NavBar from './components/NavBar/NavBar'
 import Signup from './pages/Signup/Signup'
 import Login from './pages/Login/Login'
 import Landing from './pages/Landing/Landing'
-import Profiles from './pages/Profiles/Profiles'
+// import Profiles from './pages/Profiles/Profiles'
 import NoteEntry from './pages/JournalEntry/Journal-Entry'
 import JournalPage from './components/JournalPage/JournalPage'
 import Journal from './components/Journal/Journal'
@@ -72,10 +72,10 @@ const App = () => {
           path="/login"
           element={<Login handleSignupOrLogin={handleSignupOrLogin} />}
         />
-        <Route
+        {/* <Route
           path="/profiles"
           element={user ? <Profiles /> : <Navigate to="/login" />}
-        />
+        /> */}
         <Route 
         path='/new-entry'
         element={ <NoteEntry 
