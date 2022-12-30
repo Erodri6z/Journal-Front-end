@@ -2,7 +2,12 @@
   margin-top: 50px;
   text-align: center;
 }
-
+.note-page{
+  background-color: aqua;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+}
 .mood{
   text-align: center;
 }

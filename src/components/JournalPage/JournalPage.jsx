@@ -22,6 +22,7 @@ const JournalPage = (props) => {
   
   return (
     <>
+    <section className="note-page">
       <Link to="/page-edit" state={{note}}>
         <button className="edit-btn">Edit</button>
       </Link>
@@ -30,6 +31,7 @@ const JournalPage = (props) => {
       <p className="text">{note.text}</p>
       <button className='delete-btn'onClick={() => props.handleDeleteNote(note._id)}>Delete</button>
       <br />
+    </section>
     </>
   )
 }
