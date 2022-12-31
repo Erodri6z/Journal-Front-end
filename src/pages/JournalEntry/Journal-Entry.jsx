@@ -1,5 +1,5 @@
-import { Navigate } from 'react-router-dom'
-import React, { useState } from 'react'
+// import { Navigate } from 'react-router-dom'
+import React, { useState } from 'react' 
 import './Journal-Entry.css'
 
 
@@ -19,7 +19,7 @@ const NoteEntry = (props) => {
     e.preventDefault()
     try{
       props.handleAddNote(formData)
-      Navigate('/journal')
+      // Navigate('/journal')
     }catch (err) {
       console.log(err)
     }

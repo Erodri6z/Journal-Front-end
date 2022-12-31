@@ -1,19 +1,21 @@
 .title{
   margin-top: 50px;
-  text-align: center;
+  text-align: left;
 }
 .note-page{
-  background-color: aqua;
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-top: 20px;
+  background-color: rgb(208, 208, 208);
+  margin: 0 100px;
+  min-height: 800px;
+  padding: 10px;
 }
 .mood{
-  text-align: center;
+  text-align: left;
 }
 
 .text{
-  text-align: center;
+  text-align: left;
+  padding-bottom: 20px;
+  
 }
 
 .delete-btn{

@@ -39,7 +39,7 @@ const App = () => {
   const handleAddNote = async (newNoteData) => {
     const newNote = await noteService.create(newNoteData)
     setNotes([...notes, newNote ])
-    navigate('/journal')
+    // navigate('/journal')
   }
 
   const handleDeleteNote = async noteId => {
@@ -93,9 +93,9 @@ const App = () => {
           path='/journal-page'
           element={
             <JournalPage 
-              notes={notes}
-              user={user}
-              handleDeleteNote={handleDeleteNote}
+            notes={notes}
+            user={user}
+            handleDeleteNote={handleDeleteNote}
             />
           }
         />
