@@ -20,9 +20,9 @@ const Journal = (props) => {
       </div>
       :
       <span></span>
-      }
-      </> 
-      )}
+    }
+    </> 
+    )}
     </>
   )
 }
