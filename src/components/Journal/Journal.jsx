@@ -13,9 +13,32 @@ const Journal = (props) => {
         <Link to='/journal-page' className="page-link" key={note._id} state={{ note }}>
           <h2 className="title-link">{note.title}</h2>
         </Link>
-        <p>
-          {note.mood} was the mood
-        </p>
+        { note.mood === "Sick"?
+          <p>Sick asf</p>
+          :
+          note.mood === "Happy"?
+          <p>Happy</p>
+          :
+          note.mood === "Annoyed"?
+          <p>Annoyed</p>
+          :
+          note.mood === "Shocked"?
+          <p>Shocked</p>
+          :
+          note.mood === "Numb"?
+          <p>Ive become so numb</p>
+          :
+          note.mood === "Anxious"?
+          <p>Anxiety attack</p>
+          :
+          note.mood === "Depressed"?
+          <p>Depressed</p>
+          :
+          note.mood === "Angry"?
+          <p>big mad</p>
+          :
+          <p>emotionless</p>
+        }
         <hr />
       </div>
       :
