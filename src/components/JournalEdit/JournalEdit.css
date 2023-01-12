@@ -1,9 +1,11 @@
 .edit-page{
   text-align: center;
+  font-weight: 100;
 }
 
 .title-label{
   font-size: 30px;
+  font-weight: 300;
 }
 
 #title-box{
@@ -12,10 +14,12 @@
   padding: 5px;
   font-size: 20px;
   font-family: 'Beth Ellen', cursive;
+  font-weight: 300;
 }
 
 .mood-label{
   font-size: 30px;
+  font-weight: 300;
 }
 
 #mood-input{
@@ -23,11 +27,13 @@
   border-radius: 180px;
   color:white;
   padding: 10px;
+  font-weight: 300;
 }
 
 
 .text-label{
   font-size: 30px;
+  font-weight: 300;
 }
 
 #textbox{
@@ -37,6 +43,7 @@
   padding: 5px;
   font-size: 20px;
   font-family: 'Beth Ellen', cursive;
+  font-weight: 300;
 }
 
 .publish-btn{
