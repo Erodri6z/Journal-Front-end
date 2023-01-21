@@ -23,8 +23,8 @@
   color:white;
   background-color: black;
   border: 0;
-  padding: 6px;
-  border-radius: 30%;
+  padding: 12px;
+  border-radius: 60%;
 }
 
 .edit-btn{
@@ -33,6 +33,6 @@
   margin-left: 30px;
   background-color: black;
   border: 0;
-  padding: 6px;
-  border-radius: 30%;
+  padding: 10px;
+  border-radius: 60%;
 }
