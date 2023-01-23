@@ -1,7 +1,8 @@
 .title-link{
   color: black;
- 
+  font-weight: 200;
 }
+
 .page-link{
   overflow: hidden;
   max-width:fit fit-content;
@@ -18,5 +19,5 @@ a{
 }
 
 a :hover{
-  color: blueviolet;
+  color: rgb(111, 2, 2);
 }
