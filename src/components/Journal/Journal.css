@@ -5,7 +5,7 @@
 
 .page-link{
   overflow: hidden;
-  max-width:fit fit-content;
+  max-width:250px ;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
@@ -15,8 +15,11 @@
 
 a{
   text-decoration: none;
-  
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 250px;
 }
+
 
 a :hover{
   color: rgb(111, 2, 2);

@@ -36,3 +36,10 @@
   padding: 10px;
   border-radius: 60%;
 }
+
+.head{
+  display: flex;
+}
+.mood-emoji{
+  margin: 50px;
+}
