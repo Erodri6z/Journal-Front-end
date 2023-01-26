@@ -27,7 +27,8 @@ const App = () => {
   useEffect(() => {
     const fetchAllNotes = async () => {
       const notesData = await noteService.getAll()
-      setNotes(notesData)
+      const myNotes = notesData.filter(notes => notes.author._id === user.profile)
+      setNotes(myNotes)
     }
     fetchAllNotes()
   }, [])
@@ -35,6 +36,12 @@ const App = () => {
   const handleSignupOrLogin = () => {
     setUser(authService.getUser())
   }
+
+
+  // const handleMyNotes = async notes => {
+  //   const myNotes = notes.filter(note => note.author._id === user.profile)
+  //   setNotes([myNotes])
+  // }
 
   const handleAddNote = async (newNoteData) => {
     const newNote = await noteService.create(newNoteData)

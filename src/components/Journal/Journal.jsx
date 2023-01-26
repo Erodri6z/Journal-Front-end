@@ -1,18 +1,17 @@
 import { Link } from "react-router-dom"
-import React from 'react'
+import React, { useEffect } from 'react'
 import './Journal.css'
 
 
 const Journal = (props) => {
+  const notes = props.notes
+
   return(
     <>
-    {props.notes.map(note =>
+    {notes.map(note =>
     <>
-    {note.author._id === props.user.profile ?
+    {note.author._id === props.user.profile ? 
       <div className="page-preview" key={note._id}>
-        <Link to='/journal-page' className="page-link" key={note._id} state={{ note }}>
-          <h2 className="title-link">{note.title}</h2>
-        </Link>
         { note.mood === "Sick"?
           <p>
             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-heart-pulse" viewBox="0 0 16 16">
@@ -77,14 +76,17 @@ const Journal = (props) => {
             </svg>
           </p>
           :
-          <p>emotionless</p>
+          <p>Emotionless</p>
         }
+        <Link to='/journal-page' className="page-link" key={note._id} state={{ note }}>
+          <h2 className="title-link">{note.title}</h2>
+        </Link>
         <hr />
       </div>
-      :
-      <span></span>
-    }
-    </> 
+      : 
+      <p>Nothing here yet!</p>  
+    } 
+      </> 
     )}
     </>
   )
