@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import React, { useEffect } from 'react'
+import React from 'react'
 import './Journal.css'
 
 
@@ -10,7 +10,6 @@ const Journal = (props) => {
     <>
     {notes.map(note =>
     <>
-    {note.author._id === props.user.profile ? 
       <div className="page-preview" key={note._id}>
         { note.mood === "Sick"?
           <p>
@@ -83,9 +82,6 @@ const Journal = (props) => {
         </Link>
         <hr />
       </div>
-      : 
-      <p>Nothing here yet!</p>  
-    } 
       </> 
     )}
     </>

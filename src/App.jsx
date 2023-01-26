@@ -38,11 +38,6 @@ const App = () => {
   }
 
 
-  // const handleMyNotes = async notes => {
-  //   const myNotes = notes.filter(note => note.author._id === user.profile)
-  //   setNotes([myNotes])
-  // }
-
   const handleAddNote = async (newNoteData) => {
     const newNote = await noteService.create(newNoteData)
     setNotes([...notes, newNote ])
