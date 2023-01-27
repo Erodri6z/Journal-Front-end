@@ -9,7 +9,7 @@ const NavBar = ({ user, handleLogout }) => {
         <nav>
             {/* <Link className='change-password' to="/changePassword">Change Password</Link> */}
           <ul>
-            <li id='username'>Welcome, {user.name}</li>
+            {/* <li id='username'>Welcome, {user.name}</li> */}
             <li><Link className='nav-item' to="/new-entry">Vent</Link></li>
             <li><Link className='nav-item' to="/journal">Journal</Link></li>
             <li>
