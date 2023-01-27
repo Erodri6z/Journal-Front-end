@@ -5,10 +5,11 @@ import './Journal.css'
 
 const Journal = (props) => {
   const notes = props.notes
+  const myNotes = notes.filter(n => n.author._id === props.user.profile)
 
   return(
     <>
-    {notes.map(note =>
+    {myNotes.map(note =>
     <>
       <div className="page-preview" key={note._id}>
         { note.mood === "Sick"?
