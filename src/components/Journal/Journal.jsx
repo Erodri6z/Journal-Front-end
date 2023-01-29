@@ -81,6 +81,8 @@ const Journal = (props) => {
         <Link to='/journal-page' className="page-link" key={note._id} state={{ note }}>
           <h2 className="title-link">{note.title}</h2>
         </Link>
+        <br />
+        <h2>{note.updatedAt.slice(5,7)}/{note.updatedAt.slice(8,10)}/{note.updatedAt.slice(0,4)}</h2>
       </div>
       <hr />
       </> 
