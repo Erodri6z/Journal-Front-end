@@ -1,16 +1,18 @@
 .title-link{
   color: black;
   font-weight: 200;
+  margin: 0 0 0 30px ;
 }
 
 .page-link{
   overflow: hidden;
-  max-width:250px ;
+  max-width: fit-content ;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 .page-preview{
   padding: 10px 30px;
+  display: flex;
 }
 
 a{

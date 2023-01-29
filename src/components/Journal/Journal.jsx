@@ -81,8 +81,8 @@ const Journal = (props) => {
         <Link to='/journal-page' className="page-link" key={note._id} state={{ note }}>
           <h2 className="title-link">{note.title}</h2>
         </Link>
-        <hr />
       </div>
+      <hr />
       </> 
     )}
     </>
