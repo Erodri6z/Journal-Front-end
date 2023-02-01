@@ -83,7 +83,7 @@ const Journal = (props) => {
         </Link>
         <br />
       </div>
-        <h3 className="date">{note.updatedAt.slice(5,7)}.{note.updatedAt.slice(8,10)}.{note.updatedAt.slice(0,4)}</h3>
+        <h3 className="date">{note.createdAt.slice(5,7)}/{note.createdAt.slice(8,10)}/{note.createdAt.slice(0,4)}</h3>
       <hr />
       </> 
     )}

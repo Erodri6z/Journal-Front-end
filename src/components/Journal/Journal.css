@@ -28,5 +28,6 @@ a :hover{
 }
 
 .date{
-  margin-left: 10%;
+  margin: 3px 0 10px 25px;
+  font-weight: 600
 }

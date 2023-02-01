@@ -27,7 +27,6 @@ const App = () => {
   useEffect(() => {
     const fetchAllNotes = async () => {
       const notesData = await noteService.getAll()
-      // const myNotes = notesData.filter(notes => notes.author._id === user.profile)
       setNotes(notesData)
     }
     fetchAllNotes()
