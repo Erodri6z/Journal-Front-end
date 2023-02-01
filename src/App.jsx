@@ -32,6 +32,7 @@ const App = () => {
     fetchAllNotes()
   }, [])
 
+
   const handleSignupOrLogin = () => {
     setUser(authService.getUser())
   }
